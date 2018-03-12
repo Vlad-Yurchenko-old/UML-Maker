@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TableView fx:id="changeTableTableView" editable="true" prefHeight="360.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="fieldNameCol" minWidth="150.0" prefWidth="200.0" text="Название поля" />
+            <TableColumn fx:id="fieldTypeCol" minWidth="150.0" prefWidth="200.0" text="Тип поля" />
+            <TableColumn fx:id="fieldPKCol" prefWidth="50.0" text="PK" />
+            <TableColumn fx:id="fieldAICol" prefWidth="50.0" text="AI" />
+            <TableColumn fx:id="fieldNNCol" prefWidth="50.0" text="NN" />
+            <TableColumn fx:id="fieldUQCol" prefWidth="50.0" text="UQ" />
+         </columns></TableView>
+        <Button fx:id="btnSave" mnemonicParsing="false" text="Сохранить">
+            <VBox.margin>
+                <Insets top="8.0" />
+            </VBox.margin>
+        </Button>
+    </children>
+</VBox>
