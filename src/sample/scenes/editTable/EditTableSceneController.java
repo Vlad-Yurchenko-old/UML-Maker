@@ -15,6 +15,7 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Stage;
 import sample.model.DBField;
 import sample.model.DB_TYPE;
+import sample.scenes.addFK.AddFKScene;
 import sample.scenes.main.components.Table;
 
 import java.net.URL;
@@ -26,6 +27,9 @@ public class EditTableSceneController implements Initializable {
 
     @FXML
     private Button btnSave;
+
+    @FXML
+    private Button btnAddNewFK;
 
     @FXML
     private TableView changeTableTableView;
@@ -63,6 +67,11 @@ public class EditTableSceneController implements Initializable {
             table.refresh();
             ((Stage) this.btnSave.getScene().getWindow()).close();
         });
+
+        btnAddNewFK.setOnMouseClicked(event -> {
+            new AddFKScene(table).run();
+        });
+
     }
 
     private void init() {

@@ -17,12 +17,12 @@ public class MainScene {
 
     public MainScene(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        field = new TablesField();
+        field = TablesField.getInstance();
     }
 
     public void run() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("main.fxml"));
-        fxmlLoader.setController(new MainSceneController(field));
+        fxmlLoader.setController(new MainSceneController());
         try {
             root = fxmlLoader.load();
         } catch (IOException e) {

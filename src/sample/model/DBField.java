@@ -72,6 +72,22 @@ public class DBField {
             this.parentTable = parentTable;
             this.parentField = parentField;
         }
+
+        public DBTable getParentTable() {
+            return parentTable;
+        }
+
+        public void setParentTable(DBTable parentTable) {
+            this.parentTable = parentTable;
+        }
+
+        public DBField getParentField() {
+            return parentField;
+        }
+
+        public void setParentField(DBField parentField) {
+            this.parentField = parentField;
+        }
     }
 
     public String getName() {

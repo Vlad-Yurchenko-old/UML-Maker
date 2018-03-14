@@ -1,4 +1,4 @@
-package sample.scenes.editTable;
+package sample.scenes.addFK;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -9,18 +9,18 @@ import sample.scenes.main.components.Table;
 
 import java.io.IOException;
 
-public class EditTableScene {
+public class AddFKScene {
 
     private Table table;
 
-    public EditTableScene(Table table) {
+    public AddFKScene(Table table) {
         this.table = table;
     }
 
     public void run() {
         VBox root = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("editTable.fxml"));
-        fxmlLoader.setController(new EditTableSceneController(table));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addFK.fxml"));
+        fxmlLoader.setController(new AddFKSceneController(table.getDBTable()));
         try {
             root = fxmlLoader.load();
         } catch (IOException e) {
@@ -30,9 +30,10 @@ public class EditTableScene {
         root.setMinSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
         Stage newWindow = new Stage();
         newWindow.setResizable(false);
-        newWindow.setTitle("Редактирование таблицы " + table.getDBTable().getName());
+        newWindow.setTitle("Добавление внешнего ключа");
         newWindow.setScene(new Scene(root));
         newWindow.show();
     }
+
 
 }

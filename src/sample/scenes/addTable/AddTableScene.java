@@ -11,16 +11,10 @@ import java.io.IOException;
 
 public class AddTableScene {
 
-    private TablesField tablesField;
-
-    public AddTableScene(TablesField tablesField) {
-        this.tablesField = tablesField;
-    }
-
     public void run() {
         VBox root = null;
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("addTable.fxml"));
-        fxmlLoader.setController(new AddTableSceneController(tablesField));
+        fxmlLoader.setController(new AddTableSceneController());
         try {
             root = fxmlLoader.load();
         } catch (IOException e) {
@@ -29,6 +23,7 @@ public class AddTableScene {
         root.setMaxSize(Region.USE_COMPUTED_SIZE,Region.USE_COMPUTED_SIZE);
         root.setMinSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
         Stage newWindow = new Stage();
+        newWindow.setResizable(false);
         newWindow.setTitle("Создание новой таблицы");
         newWindow.setScene(new Scene(root));
         newWindow.show();

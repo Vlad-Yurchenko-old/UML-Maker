@@ -20,8 +20,8 @@ public class AddTableSceneController implements Initializable{
     @FXML
     private Button button;
 
-    public AddTableSceneController(TablesField tablesField) {
-        this.tablesField = tablesField;
+    public AddTableSceneController() {
+        tablesField = TablesField.getInstance();
     }
 
     @Override

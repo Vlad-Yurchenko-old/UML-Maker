@@ -5,17 +5,17 @@ import java.util.ArrayList;
 
 /**
  * Класс представляющий таблицу БД
- * */
+ */
 public class DBTable {
 
     /**
      * Название таблицы
-     * */
+     */
     private String name;
 
     /**
      * Поля таблицы
-     * */
+     */
     private ArrayList<DBField> fields;
 
     public DBTable() {
@@ -43,7 +43,7 @@ public class DBTable {
 
     /**
      * Получение всех первичных ключей таблицы
-     * */
+     */
     public ArrayList<DBField> getPKs() {
         ArrayList<DBField> PKs = new ArrayList<>();
         fields.forEach(dbField -> {
@@ -54,7 +54,7 @@ public class DBTable {
 
     /**
      * Получение всех полей, являющимися внешними ключами
-     * */
+     */
     public ArrayList<DBField> getFKs() {
         ArrayList<DBField> FKs = new ArrayList<>();
         fields.forEach(dbField -> {
@@ -69,10 +69,7 @@ public class DBTable {
 
     @Override
     public String toString() {
-        return "Table{" +
-                "name='" + name + '\'' +
-                ", fields=" + fields +
-                '}';
+        return name + " " + fields;
     }
 
 }

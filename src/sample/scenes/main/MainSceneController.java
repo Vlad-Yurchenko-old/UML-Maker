@@ -14,16 +14,10 @@ public class MainSceneController implements Initializable {
     @FXML
     private Button toolbar_add_table_btn;
 
-    private TablesField tablesField;
-
-    public MainSceneController(TablesField tablesField) {
-        this.tablesField = tablesField;
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         toolbar_add_table_btn.setOnMouseClicked(event -> {
-            new AddTableScene(tablesField).run();
+            new AddTableScene().run();
         });
     }
 }
