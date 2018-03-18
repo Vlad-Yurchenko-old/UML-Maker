@@ -65,7 +65,7 @@ public class EditTableSceneController implements Initializable {
         btnSave.setOnMouseClicked(event -> {
             table.getDBTable().getFields().remove(table.getDBTable().getFields().size() - 1);
             table.refresh();
-            ((Stage) this.btnSave.getScene().getWindow()).close();
+            //((Stage) this.btnSave.getScene().getWindow()).close();
         });
 
         btnAddNewFK.setOnMouseClicked(event -> {
