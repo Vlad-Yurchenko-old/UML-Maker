@@ -15,8 +15,8 @@
             <menus>
                 <Menu mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="New" />
-                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <MenuItem fx:id="export_java" mnemonicParsing="false" text="Экспорт в Java code" />
+                        <MenuItem fx:id="export_mysql" mnemonicParsing="false" text="Экспорт в MySql скрипт" />
                         <Menu mnemonicParsing="false" text="Open Recent" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Close" />
