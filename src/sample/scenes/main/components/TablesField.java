@@ -2,9 +2,12 @@ package sample.scenes.main.components;
 
 import javafx.scene.Group;
 import sample.model.DBField;
+import sample.model.DBTable;
 import sample.model.DB_TYPE;
+import sample.model.Database;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 /**
  * Рабочая область содержащая множество таблиц
@@ -14,12 +17,14 @@ public class TablesField extends Group {
 
     private static TablesField instance = new TablesField();
 
+    private Database database;
     private ArrayList<Table> tables;
     private ArrayList<Link> links;
 
     private TablesField() {
         tables = new ArrayList<>();
         links = new ArrayList<>();
+        database = new Database();
 
         /**
          * тестовые таблицы
@@ -53,6 +58,13 @@ public class TablesField extends Group {
 
     public ArrayList<Link> getLinks() {
         return links;
+    }
+
+    public Database getDataBase() {
+        ArrayList<DBTable> dbTables = new ArrayList<>();
+        tables.forEach(table -> dbTables.add(table.getDBTable()));
+        database.setTables(dbTables);
+        return database;
     }
 
     public void addNewTable(String name) {

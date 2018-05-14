@@ -9,10 +9,10 @@ public abstract class SQLGenerator extends Generator{
         //TODO: переделать добавление новой записи
         dbTable.getFields().removeIf(dbField -> dbField.getName().compareTo("") == 0);
 
-        String entityCode = "";
-        entityCode += generateTableScript(dbTable);
-        entityCode += generateConstraintsScript(dbTable);
-        return entityCode;
+        String script = "";
+        script += generateTableScript(dbTable);
+        script += generateConstraintsScript(dbTable);
+        return script;
     }
 
     protected abstract String generateTableScript(DBTable dbTable);

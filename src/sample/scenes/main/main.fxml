@@ -17,6 +17,8 @@
                     <items>
                         <MenuItem fx:id="export_java" mnemonicParsing="false" text="Экспорт в Java code" />
                         <MenuItem fx:id="export_mysql" mnemonicParsing="false" text="Экспорт в MySql скрипт" />
+                        <MenuItem fx:id="export_orm_config" mnemonicParsing="false" text="Генерация ORM файла конфигурации" />
+
                         <Menu mnemonicParsing="false" text="Open Recent" />
                         <SeparatorMenuItem mnemonicParsing="false" />
                         <MenuItem mnemonicParsing="false" text="Close" />
